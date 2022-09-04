@@ -17,10 +17,13 @@ export default function HeaderHome() {
                         <NavLink className="nav-link" to="/antd">antd demo</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/login">login</NavLink>
+                        <NavLink className="nav-link" to="/login">login(demo)</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/detail">Detial</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/Login">login</NavLink>
                     </li>
                     <li className="nav-item dropdown">
                         <NavLink className="nav-link dropdown-toggle" to="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hooks</NavLink>

@@ -21,6 +21,7 @@ import DemoUseRoute from './pages/HookDemo/CustomHooks/DemoUseRoute';
 import 'antd/dist/antd.css';
 import AntdDemo from './pages/AntdDemo/AntdDemo';
 import './assets/scss/style.scss'
+import Login from './pages/Login/Login';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -37,7 +38,7 @@ root.render(
           <Route path='search' element={<DemoUseSearchParams></DemoUseSearchParams>}></Route>
 
           <Route path='customhook' element={<DemoUseRoute></DemoUseRoute>}></Route>
-
+          <Route path='Login'element={<Login></Login>}></Route>
           <Route path='usestate' element={<UseStateDemo></UseStateDemo>}></Route>
           <Route path='useeffect' element={<UseEffectDemo></UseEffectDemo>}></Route>
           <Route path='usecallback' element={<UseCallBackDemo></UseCallBackDemo>}></Route>
