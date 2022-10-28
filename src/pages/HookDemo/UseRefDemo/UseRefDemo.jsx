@@ -1,47 +1,49 @@
-import React,{useState} from 'react'
-import { useRef } from 'react';
+import React from "react";
+import { useRef } from "react";
+import { useState } from "react";
+/*
+    useState lấy giá trị input => Khi có tính năng chỉnh load lại form trên cùng giao diện
+    useRef sử dụng đối với form không bao gồm chỉnh sủa load lại
+    useRef : Lưu lại giá trị sau các lần render
+*/
+//formik & Yup (validation get input form) - antd Form
+export default function UseRefDemo(props) {
+  const [number, setNumber] = useState(1);
 
-//useState lay gia tri input =>khi co tinh nang chinh load lai form tren cung giao dien
-//useReef su dung doi voi form khong bao gom chinh sua load lai
-//useRef:luu lai gia tri sau cac lan render
+  const userLoginRef = useRef({
+    username: "",
+    password: "",
+  });
 
-
-
-export default function UseRefDemo(prod) {
-    const [number,setNumber]=useState(1);
-    const userLoginRef=useRef({
-        username:'',
-        password:'',
-    });
-
-    const handleChange=(e)=>{
-        let{id,value}=e.target;
-        userLoginRef.current[id]=value;
-        // setUserLogin({
-        //     ...userLogin,
-        //     [id]:value
-        // })
-    }
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        console.log(userLoginRef.current);
-    }
-
-
+  const handleChange = (e) => {
+    let { id, value } = e.target;
+    userLoginRef.current[id] = value;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userLoginRef.current);
+  };
   return (
-    <form className='container'onSubmit={handleSubmit}>
-        <h3>login</h3>
-        <div className="form-group">
-            <p>username</p>
-            <input className='form-control' id='username' onInput={handleChange} />
-        </div>
-        <div className="form-group">
-            <p>password</p>
-            <input className='form-control' id='password'type='password' onInput={handleChange}/>
-        </div>
-        <div className="form-group">
-            <button className='btn btn-danger'type='submit'>login</button>
-        </div>
+    <form className="container" onSubmit={handleSubmit}>
+      <h3>Login</h3>
+      <div className="form-group">
+        <p>username</p>
+        <input className="form-control" id="username" onInput={handleChange} />
+      </div>
+      <div className="form-group">
+        <p>password</p>
+        <input
+          className="form-control"
+          id="password"
+          type="password"
+          onInput={handleChange}
+        />
+      </div>
+      <div className="form-group">
+        <button className="btn btn-success" type="submit">
+          Login
+        </button>
+      </div>
     </form>
-  )
+  );
 }

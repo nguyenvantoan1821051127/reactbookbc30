@@ -1,13 +1,17 @@
 import React from 'react'
-import {Button, DatePicker} from 'antd'
+import {DatePicker,Button} from 'antd'
+export default function AntDDemo(props) {
 
 
-export default function AntdDemo(props) {
   return (
     <div className='container'>
-        demo antd
-        <DatePicker></DatePicker>
-        <Button size='middle' block='true'>button click</Button>
+        Demo antd
+        <div>
+        <DatePicker />
+        <br />
+        <Button size='large' block="true">Button click</Button>
+        </div>
     </div>
   )
 }
+

@@ -1,29 +1,29 @@
 //rxslice
 import { createSlice } from '@reduxjs/toolkit'
-
-
-//state.facebookReducer
+//state.facebookReducer = 
 const initialState = {
-    arrComment:[
-        {name:'toan',content:'hihi 123'},
-        {name:'long',content:'hihi 456'}
+    arrComment: [
+        {name:'Khải',content: 'hihi 123'},
+        {name:'Hậu',content: 'hihi 456'},
     ]
 }
 
+//redux saga
 const facebookReducer = createSlice({
-  name: 'facebookReducer', //ten noi voi ten action
+  name: 'facebookReducer', //tên nối với tên action
   initialState,
   reducers: {
-    addComment:(state,action)=>{
-        //buoc 1:lay du lieu action gui len
-        const userComment=action.payload;
-        //b2:cap nhat state
-        //vi userComment.current 2 lan push la giong nhau vung nho =>clone ra truoc khi push
-        state.arrComment.push({...userComment})
+    addComment: (state,action) => {
+        //b1: lấy dữ liệu action gửi lên
+        const userComment = action.payload;
+        //b2: cập nhật state
+        //Vì userComment.current 2 lần push là giống nhau vùng nhớ => clone ra trước khi push
+        state.arrComment.push({...userComment});
     }
   }
 });
 
 export const {addComment} = facebookReducer.actions
-
 export default facebookReducer.reducer
+//---------------------- action ------------------
+

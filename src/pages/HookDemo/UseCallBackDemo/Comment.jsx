@@ -1,12 +1,18 @@
-import React,{memo} from 'react'
+import React, { memo } from "react";
 
- function Comment(props) {
+function Comment(props) {
+
+  console.log("comment");
   return (
-    <div className='mt-2'>
-        {props.renderLike()}
-        <textarea className='form-control w-50'></textarea><br />
-        <button className='btn btn-success'>gui</button>
+    <div className="mt-2">
+      {props.renderLike()}
+
+      <textarea className="form-control w-50"></textarea> <br />
+      <button className="btn btn-success">Gửi</button>
     </div>
   );
 }
-export default memo(Comment)
+
+export default memo(Comment);
+
+// PureComponent

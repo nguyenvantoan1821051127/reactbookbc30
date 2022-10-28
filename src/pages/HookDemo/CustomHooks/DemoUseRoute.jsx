@@ -1,15 +1,14 @@
-import React from 'react'
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import useRoute from '../../../hooks/useRoute';
-
+import React from 'react';
+import {useNavigate, useParams, useSearchParams} from 'react-router-dom'
+import useRoutes from '../../../hooks/useRoutes';
 export default function DemoUseRoute() {
-  const {navigate,searchParams,params}=useRoute('abc');
-  const [search,setSearch]=searchParams;
-  console.log({navigate,searchParams,params})
+  const {navigate,searchParams,params} = useRoutes(123);
+  const [search,setSearch] = searchParams;
+
+  
+  console.log({navigate,searchParams,params});
+
   return (
-    
-    <div>
-        ffdsafda
-    </div>
+    <div>DemoUseRoute</div>
   )
 }

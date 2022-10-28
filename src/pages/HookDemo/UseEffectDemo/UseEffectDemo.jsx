@@ -44,7 +44,7 @@ export default function UseEffectDemo(props) {
     //Tương đương componentDidMount
     getApi();
     
-    // Cài đặt hàm tự chạy ngầm 1 s setCount 1 lần
+    //Cài đặt hàm tự chạy ngầm 1 s setCount 1 lần
     // timeout = setInterval(()=>{
     //     setCount((count)=> {
     //         return count - 1;

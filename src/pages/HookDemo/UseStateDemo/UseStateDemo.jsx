@@ -1,31 +1,33 @@
 //rfc
 import React,{useState} from 'react'
-import BaiTapChonXe from './BaiTapChonXe'
+import BaiTapChonXe from './BaiTapChonXe';
 
 export default function UseStateDemo() {
-  
-      // useState la ham cua react cung cap
-      //luu y: khong goi ham nay trong if else hay switch...
-      //[giatriThayDoi,hamSetLaiGiaTriMoi]=useState (gia tri mac dinh ban dau)
-
-  
-  const [like,setLike]=useState(1)
-
+  /*
+    useState là hàm của react cung cấp. 
+    Lưu ý: Không gọi hàm này trong if else hay switch ...
+    [giáTriThayDoi,hamSetLaiGiaTriMoi] = useState(giá trị mặc định ban đầu);
+    this.state = {
+      like: 1
+    }
+  */
+ 
+  const [like,setLike] = useState(1);
   return (
     <div className='container'>
-      <div className="card w-25">
-        <img src="https://i.pravatar.cc?u=1" alt='avatar' />
-        <div className="card-body">
-          <h3>ho ten: Nguyen Toan</h3>
-          <p>tuoi:18</p>
-          <p>like:{like}</p>
-          <button className='btn btn-danger' onClick={()=>{
+      <div className='card w-25'>
+        <img src='https://i.pravatar.cc?u=1' alt='avatar' />
+        <div className='card-body'>
+          <h3>Họ tên: Đỗ Khải</h3>
+          <p>Tuổi: 18</p>
+          <p>Like: {like}</p>
+          <button className='btn btn-danger' onClick={()=> {
             setLike(like+1)
-          }}>like</button>
+          }}>Like</button>
         </div>
-        <hr />
       </div>
-      <BaiTapChonXe></BaiTapChonXe>
+      <hr />
+      <BaiTapChonXe />
     </div>
   )
 }
